@@ -1,0 +1,82 @@
+.typing {
+    display: flex;
+}
+
+.typing .options {
+    margin-left: 8px;
+    overflow: hidden;
+    /* height will be always equal to strong tag line height */
+    height: 46px;
+}
+
+.typing .options ul {
+    list-style-type: none;
+}
+
+.typing .options ul li {
+    position: relative;
+    top: 0;
+    animation: slide 9s steps(3) infinite;
+}
+
+@keyframes slide {
+    100% {
+        /* Top value will always be 3 * line height of strong tag */
+        top: -138px;
+    }
+}
+
+.typing .options ul li span strong {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 46px;
+    color: #FFB533;
+    font-family: 'Poppins', sans-serif;
+}
+
+.typing .options ul li span strong:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    /* height will be always equal to strong tag line height */
+    height: 46px;
+    background-color: #0A0A1A;
+    border-left: 3px solid white;
+    animation: typing 3s steps(15) infinite;
+}
+
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100% + 10px);
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@media(max-width: 800px) {
+    .typing .options {
+        /* height will be always equal to strong tag line height */
+        height: 33px;
+    }
+
+    .typing .options ul li span strong {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .typing .options ul li span strong:after {
+        /* height will be always equal to strong tag line height */
+        height: 33px;
+    }
+
+    @keyframes slide {
+        100% {
+            /* Top value will always be 3 * line height of strong tag */
+            top: -99px;
+        }
+    }
+}
