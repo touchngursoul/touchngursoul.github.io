@@ -30,7 +30,7 @@
     font-size: 35px;
     font-weight: 500;
     line-height: 46px;
-    color: #FFB533;
+    color: #38b6ff;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -41,7 +41,7 @@
     width: 100%;
     /* height will be always equal to strong tag line height */
     height: 46px;
-    background-color: #0A0A1A;
+    background-color: #000000;
     border-left: 3px solid white;
     animation: typing 3s steps(15) infinite;
 }
